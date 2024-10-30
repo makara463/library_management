@@ -1,0 +1,53 @@
+﻿@model library_management_system.Models.Book
+
+@{
+    Layout = "~/Views/Shared/Admin/_layout.cshtml";
+}
+<div class="card w-50 m-auto mt-5">
+    <div class="card-body">
+        <h3>Are you sure you want to delete this?</h3>
+        <div>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.Title)
+                </dt>
+                <dd class="col-sm-8 mb-3">
+                    @Html.DisplayFor(model => model.Title)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.Author)
+                </dt>
+                <dd class="col-sm-8 mb-3">
+                    @Html.DisplayFor(model => model.Author)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.Status)
+                </dt>
+                <dd class="col-sm-8 mb-3">
+                    @Html.DisplayFor(model => model.Status)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.Publication)
+                </dt>
+                <dd class="col-sm-8 mb-3">
+                    @Html.DisplayFor(model => model.Publication.Year)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Branch)
+                </dt>
+                <dd class="col-sm-8 mb-3">
+                    @Html.DisplayFor(model => model.Branch.BranchName)
+                </dd>
+            </dl>
+            <hr />
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="BookID" />
+                <input type="submit" value="Delete" class="btn btn-danger" /> |
+                <a asp-action="Index" class="btn btn-warning">Back to List</a>
+            </form>
+        </div>
+
+    </div>
+
+</div>

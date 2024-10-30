@@ -1,0 +1,45 @@
+﻿@model library_management_system.Models.Publication
+
+@{
+    Layout = "~/Views/Shared/Admin/_layout.cshtml";
+}
+
+<div class="card w-50 m-auto mt-5">
+    <div class="card">
+        <div>
+            <h4>Publication</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.Title)
+                </dt>
+                <dd class="col-sm-8 mb-3">
+                    @Html.DisplayFor(model => model.Title)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.Author)
+                </dt>
+                <dd class="col-sm-8 mb-3">
+                    @Html.DisplayFor(model => model.Author)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.Year)
+                </dt>
+                <dd class="col-sm-8 mb-3">
+                    @Html.DisplayFor(model => model.Year)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.ISBN)
+                </dt>
+                <dd class="col-sm-8 mb-3">
+                    @Html.DisplayFor(model => model.ISBN)
+                </dd>
+            </dl>
+            <hr />
+        </div>
+        <div>
+            <a asp-action="Edit" asp-route-id="@Model?.PublicationID" class="btn btn-warning">Edit</a> |
+            <a asp-action="Index" class="btn btn-danger">Back to List</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+﻿<div class="sidebar pe-4 pb-3">
+    <nav class="navbar bg-light navbar-light">
+        <a href="" class="navbar-brand mx-4 mb-3">
+            <h3 class="text-primary">AGA INSTITUTE</h3>
+        </a>
+        <div class="d-flex align-items-center ms-4 mb-4">
+            <div class="position-relative">
+                <img class="rounded-circle" src="~/Admin/img/photo_2024-10-27_21-23-54.jpg" alt="" style="width: 40px; height: 40px;">
+                <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+            </div>
+            <div class="ms-3">
+                <h6 class="mb-0">Library</h6>
+                <span>Admin</span>
+            </div>
+        </div>
+        <div class="navbar-nav w-100">
+            <a  class="nav-item nav-link active" asp-controller="Admin" asp-action="Index"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+            <a class="nav-item nav-link" asp-controller="Branches" asp-action="Index"><i class="fa fa-map-marker-alt me-2"></i>Branches</a>
+            <a class="nav-item nav-link" asp-controller="Publications" asp-action="Index"><i class="fa fa-book me-2"></i>Publications</a>
+            <a class="nav-item nav-link" asp-controller="Books" asp-action="Index"><i class="fa fa-book me-2"></i>Books</a>
+            <a class="nav-item nav-link" asp-controller="Students" asp-action="Index"><i class="fa fa-user-graduate me-2"></i>Students</a>
+            <a class="nav-item nav-link" asp-controller="Issues" asp-action="Index"><i class="fa fa-book me-2"></i>Issues</a>
+            <a class="nav-item nav-link" asp-controller="Penalties" asp-action="Index"><i class="fa fa-exclamation-triangle me-2"></i>Penalties</a>
+        </div>
+    </nav>
+</div>

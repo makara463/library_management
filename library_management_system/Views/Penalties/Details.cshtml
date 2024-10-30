@@ -1,0 +1,47 @@
+﻿@model library_management_system.Models.Penalty
+
+@{
+    Layout = "~/Views/Shared/Admin/_layout.cshtml";
+}
+<div class="card w-50 m-auto mt-5">
+    <div class="card-body">
+        <h4>Penalty</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Amount)
+            </dt>
+            <dd class="col-sm-8 mb-3">
+                @Html.DisplayFor(model => model.Amount)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Reason)
+            </dt>
+            <dd class="col-sm-8 mb-3">
+                @Html.DisplayFor(model => model.Reason)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Date)
+            </dt>
+            <dd class="col-sm-8 mb-3">
+                @Html.DisplayFor(model => model.Date)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Student)
+            </dt>
+            <dd class="col-sm-8 mb-3">
+                @Html.DisplayFor(model => model.Student.Email)
+            </dd>
+        </dl>
+    </div>
+    <hr />
+
+    <div class="mb-3">
+        <a asp-action="Edit" asp-route-id="@Model?.PenaltyID" class="btn btn-warning">Edit</a> |
+        <a asp-action="Index"class="btn btn-danger">Back to List</a>
+    </div>
+
+    </div>
+
+</div>
+  

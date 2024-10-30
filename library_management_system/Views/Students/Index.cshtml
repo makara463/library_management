@@ -1,0 +1,55 @@
+﻿@model IEnumerable<library_management_system.Models.Student>
+
+@{
+    Layout = "~/Views/Shared/Admin/_layout.cshtml";
+}
+<div class="card shadow-sm my-2 ">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-3">
+                <a asp-action="Create" class="btn btn-primary btn-sm"><i class="fa fa-plus me-2"></i>Create New</a>
+            </div>
+            <div class="col-sm-9">
+                <h3 class="text-primary">Students List</h3>
+            </div>
+        </div>
+        <table class="table table-striped mt-3 ">
+            <thead class="bg-dark text-white">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.branches)
+                    </th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.branches.BranchName)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.StudentID" class="btn btn-warning text-white"><i class="fa fa-pen"></i> Edit</a>
+                            <a asp-action="Details" asp-route-id="@item.StudentID" class="btn btn-success"><i class="fa fa-info-circle"></i> Details</a>
+                            <a asp-action="Delete" asp-route-id="@item.StudentID" class="btn btn-danger"><i class="fa fa-trash me-2"></i>Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>

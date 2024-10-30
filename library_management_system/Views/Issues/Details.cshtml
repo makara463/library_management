@@ -1,0 +1,51 @@
+﻿@model library_management_system.Models.Issue
+
+@{
+    Layout = "~/Views/Shared/Admin/_layout.cshtml";
+}
+<div class="card w-50 m-auto mt-5">
+    <div class="card-body">
+        <div>
+            <h4>Issue</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.Student)
+                </dt>
+                <dd class="col-sm-8 mb-3">
+                    @Html.DisplayFor(model => model.Student.Name)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.Book)
+                </dt>
+                <dd class="col-sm-8 mb-3">
+                    @Html.DisplayFor(model => model.Book.Title)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.IssueDate)
+                </dt>
+                <dd class="col-sm-8 mb-3">
+                    @Html.DisplayFor(model => model.IssueDate)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.ReturnDate)
+                </dt>
+                <dd class="col-sm-8 mb-3">
+                    @Html.DisplayFor(model => model.ReturnDate)
+                </dd>
+                <dt class="col-sm-4">
+                    @Html.DisplayNameFor(model => model.Status)
+                </dt>
+                <dd class="col-sm-8 mb-3">
+                    @Html.DisplayFor(model => model.Status)
+                </dd>
+
+            </dl>
+        </div>
+        <div>
+            <a asp-action="Edit" asp-route-id="@Model?.IssueID" class="btn btn-warning">Edit</a> |
+            <a asp-action="Index" class="btn btn-danger">Back to List</a>
+        </div>
+    </div>
+
+</div>
